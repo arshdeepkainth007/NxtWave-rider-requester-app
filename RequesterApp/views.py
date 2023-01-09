@@ -82,7 +82,7 @@ def RequesterAPI(request):
         "message": None
     }
     if request.method == 'GET':
-        if not request.GET['requester_id']:
+        if not request.GET.get('requester_id'):
             response["message"] = "Please provide requester id"
             return Response(response, status=http_satus.HTTP_406_NOT_ACCEPTABLE)
         paginator = StandardResultsSetPagination()

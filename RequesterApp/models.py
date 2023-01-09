@@ -25,7 +25,7 @@ class RequesterModel(models.Model):
     ToAddress = models.CharField(max_length=500)
     DateTime = models.DateField()
     NumberOfAssets = models.IntegerField()
-    AssetType = models.CharField(max_length=1, choices=ASSET_TYPES, default='P')
+    AssetType = models.CharField(max_length=1, choices=ASSET_TYPES)
     Senstivity = models.CharField(max_length=1, choices=ASSET_SENSTIVITY, default='N')
     Status = models.CharField(max_length=1, choices=STATUS, default='-')
     RideID = models.IntegerField(null=True, default=None)
